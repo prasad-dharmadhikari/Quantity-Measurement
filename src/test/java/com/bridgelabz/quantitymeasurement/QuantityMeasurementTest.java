@@ -23,4 +23,11 @@ public class QuantityMeasurementTest {
         String result1 = quantityMeasurement.compare(f1, f2);
         Assert.assertEquals("not equal", result1);
     }
+
+    @Test
+    public void givenTwoFeetObjects_IfObjectsAreSame_ShouldReturnEqual() {
+        Feet f1 = new Feet(0.0);
+        String result1 = quantityMeasurement.compare(f1, f1);
+        Assert.assertEquals("equal", result1);
+    }
 }
