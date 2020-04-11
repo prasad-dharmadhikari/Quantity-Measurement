@@ -81,4 +81,11 @@ public class QuantityMeasurementTest {
         Assert.assertEquals("equal", result1);
     }
 
+    @Test
+    public void givenTwoInchObjects_IfValuesAreSame_ShouldReturnEqual() {
+        Inch firstValue = new Inch(12.0);
+        Inch secondValue = new Inch(12.0);
+        String result1 = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result1);
+    }
 }
