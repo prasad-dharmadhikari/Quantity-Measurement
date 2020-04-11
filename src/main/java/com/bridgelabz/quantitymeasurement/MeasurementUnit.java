@@ -1,10 +1,10 @@
 package com.bridgelabz.quantitymeasurement;
 
-public enum Unit {
+public enum MeasurementUnit {
     FEET(12), INCH(1), YARD(36);
     Double baseValue;
 
-    Unit(double baseValue) {
+    MeasurementUnit(double baseValue) {
         this.baseValue = baseValue;
     }
     public Double convertToBaseValue(Double distance) {
