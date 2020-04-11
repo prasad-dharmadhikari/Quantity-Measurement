@@ -7,4 +7,10 @@ public class QuantityMeasurement {
             return "equal";
         return "not equal";
     }
+
+    public String compare(Inch i1, Inch i2) {
+        if (i1.equals(i2))
+            return "equal";
+        return "not equal";
+    }
 }
