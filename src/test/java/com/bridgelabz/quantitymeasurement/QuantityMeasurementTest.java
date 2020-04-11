@@ -65,4 +65,11 @@ public class QuantityMeasurementTest {
         String result1 = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("not equal", result1);
     }
+
+    @Test
+    public void givenTwoInchObjects_IfObjectsAreSame_ShouldReturnEqual() {
+        Inch firstValue = new Inch(0.0);
+        String result1 = quantityMeasurement.compare(firstValue, firstValue);
+        Assert.assertEquals("equal", result1);
+    }
 }
