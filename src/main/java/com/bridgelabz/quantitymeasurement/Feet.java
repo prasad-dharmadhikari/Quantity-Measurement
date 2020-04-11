@@ -1,11 +1,9 @@
 package com.bridgelabz.quantitymeasurement;
 
-import java.util.Objects;
-
 public class Feet {
-    double length;
+    Double length;
 
-    public Feet(double length) {
+    public Feet(Double length) {
         this.length = length;
     }
 
