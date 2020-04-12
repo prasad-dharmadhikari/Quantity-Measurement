@@ -2,7 +2,7 @@ package com.bridgelabz.quantitymeasurement;
 
 public enum MeasurementUnit {
     FEET(12.0), INCH(1.0), YARD(36.0), CENTIMETER(0.4),
-    GALLON(3780), LITRES(1000), MILLILITERS(1);
+    GALLON(3.78), LITRES(1), MILLILITERS(0.001);
     Double baseValue;
 
     MeasurementUnit(double baseValue) {
@@ -10,6 +10,6 @@ public enum MeasurementUnit {
     }
 
     public Double convertToBaseValue(Double quantity) {
-        return quantity * baseValue;
+        return quantity * this.baseValue;
     }
 }
