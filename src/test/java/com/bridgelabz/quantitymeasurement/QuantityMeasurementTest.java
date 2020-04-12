@@ -143,4 +143,36 @@ public class QuantityMeasurementTest {
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
+
+    @Test
+    public void givenTwoInchValues_WhenAdded_ShouldReturnResultInInch() {
+        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
+        Distance secondValue = new Distance(2.0, MeasurementUnit.INCH);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(4.0, result, 0.0);
+    }
+
+    @Test
+    public void givenOneFeetAndOneInchValue_WhenAdded_ShouldReturnResultInInch() {
+        Distance firstValue = new Distance(1.0, MeasurementUnit.FEET);
+        Distance secondValue = new Distance(2.0, MeasurementUnit.INCH);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(14.0, result, 0.0);
+    }
+
+    @Test
+    public void givenTwoFeetValues_WhenAdded_ShouldReturnResultInInch() {
+        Distance firstValue = new Distance(1.0, MeasurementUnit.FEET);
+        Distance secondValue = new Distance(1.0, MeasurementUnit.FEET);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(24.0, result, 0.0);
+    }
+
+    @Test
+    public void givenOneInchAndOneCentimeterValue_WhenAdded_ShouldReturnResultInInch() {
+        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
+        Distance secondValue = new Distance(2.5, MeasurementUnit.CENTIMETER);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(3.0, result, 0.0);
+    }
 }
