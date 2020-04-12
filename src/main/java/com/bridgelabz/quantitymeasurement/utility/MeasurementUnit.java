@@ -1,8 +1,8 @@
 package com.bridgelabz.quantitymeasurement.utility;
 
 public enum MeasurementUnit {
-    FEET(12.0,MeasurementType.LENGTH),
-    INCH(1.0,MeasurementType.LENGTH),
+    FEET(12.0, MeasurementType.LENGTH),
+    INCH(1.0, MeasurementType.LENGTH),
     YARD(36.0, MeasurementType.LENGTH),
     CENTIMETER(0.4, MeasurementType.LENGTH),
 
