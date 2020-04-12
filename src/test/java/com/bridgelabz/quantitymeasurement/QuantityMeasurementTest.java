@@ -8,9 +8,9 @@ public class QuantityMeasurementTest {
 
     @Test
     public void givenTwoFeetValues_IfCompared_ShouldReturnAppropriateResult() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(0.0, MeasurementUnit.FEET);
-        Distance thirdValue = new Distance(5.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity thirdValue = new MeasurementQuantity(5.0, MeasurementUnit.FEET);
         String result1 = quantityMeasurement.compare(firstValue, secondValue);
         String result2 = quantityMeasurement.compare(firstValue, thirdValue);
         Assert.assertEquals("equal", result1);
@@ -19,39 +19,39 @@ public class QuantityMeasurementTest {
 
     @Test
     public void givenTwoFeetObjects_IfOneOfThemIsNull_ShouldReturnNotEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
         String result = quantityMeasurement.compare(firstValue, null);
         Assert.assertEquals("not equal", result);
     }
 
     @Test
     public void givenTwoFeetObjects_IfObjectsAreSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
         String result = quantityMeasurement.compare(firstValue, firstValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoObjects_IfTypeIsSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(0.0, MeasurementUnit.FEET);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoObjects_IfValuesAreSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(12.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(12.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(12.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(12.0, MeasurementUnit.FEET);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoInchValues_IfCompared_ShouldReturnAppropriateResult() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(0.0, MeasurementUnit.INCH);
-        Distance thirdValue = new Distance(5.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity thirdValue = new MeasurementQuantity(5.0, MeasurementUnit.INCH);
         String result1 = quantityMeasurement.compare(firstValue, secondValue);
         String result2 = quantityMeasurement.compare(firstValue, thirdValue);
         Assert.assertEquals("equal", result1);
@@ -60,119 +60,135 @@ public class QuantityMeasurementTest {
 
     @Test
     public void givenTwoInchObjects_IfOneOfThemIsNull_ShouldReturnNotEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
         String result = quantityMeasurement.compare(firstValue, null);
         Assert.assertEquals("not equal", result);
     }
 
     @Test
     public void givenTwoInchObjects_IfObjectsAreSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
         String result = quantityMeasurement.compare(firstValue, firstValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoInchObjects_IfTypeIsSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(0.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(0.0, MeasurementUnit.INCH);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoInchObjects_IfValuesAreSame_ShouldReturnEqual() {
-        Distance firstValue = new Distance(12.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(12.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(12.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(12.0, MeasurementUnit.INCH);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void given3FeetAnd1Yard_ShouldReturnEqual() {
-        Distance firstValue = new Distance(3.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity firstValue = new MeasurementQuantity(3.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void given1FeetAndOneYard_ShouldReturnNotEqual() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("not equal", result);
     }
 
     @Test
     public void given1InchAnd1Yard_ShouldNotReturnEqual() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("not equal", result);
     }
 
     @Test
     public void given1YardAnd36Inch_ShouldNotReturnEqual() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.YARD);
-        Distance secondValue = new Distance(36.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity secondValue = new MeasurementQuantity(36.0, MeasurementUnit.INCH);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void given36InchAnd1Yard_ShouldReturnEqual() {
-        Distance firstValue = new Distance(36.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity firstValue = new MeasurementQuantity(36.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void given1YardAnd3Feet_ShouldReturnEqual() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.YARD);
-        Distance secondValue = new Distance(3.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.YARD);
+        MeasurementQuantity secondValue = new MeasurementQuantity(3.0, MeasurementUnit.FEET);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void given2InchAnd5Centimeter_ShouldReturnEqual() {
-        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(5.0, MeasurementUnit.CENTIMETER);
+        MeasurementQuantity firstValue = new MeasurementQuantity(2.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(5.0, MeasurementUnit.CENTIMETER);
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
 
     @Test
     public void givenTwoInchValues_WhenAdded_ShouldReturnResultInInch() {
-        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(2.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(2.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(2.0, MeasurementUnit.INCH);
         Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
         Assert.assertEquals(4.0, result, 0.0);
     }
 
     @Test
     public void givenOneFeetAndOneInchValue_WhenAdded_ShouldReturnResultInInch() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(2.0, MeasurementUnit.INCH);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(2.0, MeasurementUnit.INCH);
         Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
         Assert.assertEquals(14.0, result, 0.0);
     }
 
     @Test
     public void givenTwoFeetValues_WhenAdded_ShouldReturnResultInInch() {
-        Distance firstValue = new Distance(1.0, MeasurementUnit.FEET);
-        Distance secondValue = new Distance(1.0, MeasurementUnit.FEET);
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.FEET);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1.0, MeasurementUnit.FEET);
         Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
         Assert.assertEquals(24.0, result, 0.0);
     }
 
     @Test
     public void givenOneInchAndOneCentimeterValue_WhenAdded_ShouldReturnResultInInch() {
-        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
-        Distance secondValue = new Distance(2.5, MeasurementUnit.CENTIMETER);
+        MeasurementQuantity firstValue = new MeasurementQuantity(2.0, MeasurementUnit.INCH);
+        MeasurementQuantity secondValue = new MeasurementQuantity(2.5, MeasurementUnit.CENTIMETER);
         Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
         Assert.assertEquals(3.0, result, 0.0);
+    }
+
+    @Test
+    public void givenOneGallonAndOneLitreValue_IfEqual_ShouldReturnEqual() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.GALLON);
+        MeasurementQuantity secondValue = new MeasurementQuantity(3.78, MeasurementUnit.LITRES);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
+    }
+
+    @Test
+    public void givenOneLitreAndOneMillilitreValue_IfEqual_ShouldReturnEqual() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.LITRES);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.MILLILITERS);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
     }
 }
