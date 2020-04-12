@@ -207,4 +207,28 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(2.0, result, 0.0);
     }
 
+    @Test
+    public void givenOneKilogramValueAndOneGramValue_IfEqual_ShouldReturnEqual() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.KILOGRAMS);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.GRAMS);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
+    }
+
+    @Test
+    public void givenOneTonneValueAndOneKilogramValue_IfEqual_ShouldReturnEqual() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.TONNE);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.KILOGRAMS);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
+    }
+
+    @Test
+    public void givenOneTonneAndOneGramValue_WhenAdded_ShouldReturnResultInKilogram() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.TONNE);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.GRAMS);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(1001.0, result, 0.0);
+    }
+
 }
