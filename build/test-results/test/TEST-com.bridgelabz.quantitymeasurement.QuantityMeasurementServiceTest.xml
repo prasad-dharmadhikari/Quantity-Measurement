@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" tests="35" skipped="0" failures="0" errors="0" timestamp="2020-04-12T12:56:18" hostname="Prasad" time="0.131">
+  <properties/>
+  <testcase name="givenTwoFeetObjects_IfOneOfThemIsNull_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.017"/>
+  <testcase name="givenTwoFeetObjects_IfObjectsAreSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="given1InchAnd1Yard_ShouldNotReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoObjects_IfBothOfThemAreNull_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.002"/>
+  <testcase name="givenOneInchAndOneCentimeterValue_IfBothOfThemAreNull_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.002"/>
+  <testcase name="givenTwoInchValues_WhenAdded_ShouldReturnResultInInch" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="given36InchAnd1Yard_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.002"/>
+  <testcase name="given1FeetAndOneYard_ShouldReturnNotEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <testcase name="givenOneInchAndOneCentimeterValue_WhenAdded_ShouldReturnResultInInch" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.003"/>
+  <testcase name="givenTwoObjects_IfValuesAreSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTemperatureInCelsiusAndFahrenheit_IfEqual_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.003"/>
+  <testcase name="givenOneLitreAndOneMillilitreValue_WhenAdded_ShouldReturnResultInLitres" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneFeetAndOneInchValue_WhenAdded_ShouldReturnResultInInch" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.004"/>
+  <testcase name="givenTwoObjects_IfTypeIsSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <testcase name="givenTwoInchObjects_IfOneOfThemIsNull_ShouldReturnNotEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.002"/>
+  <testcase name="givenTwoInchObjects_IfObjectsAreSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.003"/>
+  <testcase name="givenTwoInchObjects_IfTypeIsSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <testcase name="given2InchAnd5Centimeter_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneGallonAndOneLitreValue_IfEqual_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoInchValues_IfCompared_ShouldReturnAppropriateResult" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <testcase name="givenOneTonneAndOneGramValue_WhenAdded_ShouldReturnResultInKilogram" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="given1YardAnd36Inch_ShouldNotReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoFeetValues_WhenAdded_ShouldReturnResultInInch" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoValues_IfMeasurementTypesAreNotEqualWhileAddition_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoInchObjects_IfValuesAreSame_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoObjects_IfOneOfThemIsNull_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.004"/>
+  <testcase name="given1YardAnd3Feet_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneGallonAndOneLitreValue_WhenAdded_ShouldReturnResultInLitres" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneLitreAndOneMillilitreValue_IfEqual_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneKilogramValueAndOneGramValue_IfEqual_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoFeetValues_IfCompared_ShouldReturnAppropriateResult" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneInchAndOneCentimeterValue_IfOneOfThemIsNull_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenTwoObjects_IfMeasurementTypesAreNotEqual_ShouldThrowException" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.001"/>
+  <testcase name="givenOneTonneValueAndOneKilogramValue_IfEqual_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <testcase name="given3FeetAnd1Yard_ShouldReturnEqual" classname="com.bridgelabz.quantitymeasurement.QuantityMeasurementServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
