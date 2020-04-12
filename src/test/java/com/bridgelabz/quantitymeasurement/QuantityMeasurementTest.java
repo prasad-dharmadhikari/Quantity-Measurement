@@ -191,4 +191,20 @@ public class QuantityMeasurementTest {
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
+
+    @Test
+    public void givenOneGallonAndOneLitreValue_WhenAdded_ShouldReturnResultInLitres() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.GALLON);
+        MeasurementQuantity secondValue = new MeasurementQuantity(3.78, MeasurementUnit.LITRES);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(7.56, result, 0.0);
+    }
+    @Test
+    public void givenOneLitreAndOneMillilitreValue_WhenAdded_ShouldReturnResultInLitres() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.LITRES);
+        MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.MILLILITERS);
+        Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
+        Assert.assertEquals(2.0, result, 0.0);
+    }
+
 }
