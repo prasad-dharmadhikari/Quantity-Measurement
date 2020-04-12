@@ -7,4 +7,8 @@ public class QuantityMeasurement {
             return "equal";
         return "not equal";
     }
+
+    public Double addTwoValues(Distance firstValue, Distance secondValue) {
+        return firstValue.distance + secondValue.distance;
+    }
 }
