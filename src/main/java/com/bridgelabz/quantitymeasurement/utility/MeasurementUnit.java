@@ -1,14 +1,28 @@
-package com.bridgelabz.quantitymeasurement;
+package com.bridgelabz.quantitymeasurement.utility;
 
 public enum MeasurementUnit {
-    FEET(12.0), INCH(1.0), YARD(36.0), CENTIMETER(0.4),
-    GALLON(3.78), LITRES(1), MILLILITERS(0.001),
-    KILOGRAMS(1.0), GRAMS(0.001), TONNE(1000),
-    FAHRENHEIT(1), CELSIUS(2.12);
-    Double baseValue;
+    FEET(12.0,MeasurementType.LENGTH),
+    INCH(1.0,MeasurementType.LENGTH),
+    YARD(36.0, MeasurementType.LENGTH),
+    CENTIMETER(0.4, MeasurementType.LENGTH),
 
-    MeasurementUnit(double baseValue) {
+    GALLON(3.78, MeasurementType.VOLUME),
+    LITRES(1, MeasurementType.VOLUME),
+    MILLILITERS(0.001, MeasurementType.VOLUME),
+
+    KILOGRAMS(1.0, MeasurementType.WEIGHT),
+    GRAMS(0.001, MeasurementType.WEIGHT),
+    TONNE(1000, MeasurementType.WEIGHT),
+
+    FAHRENHEIT(1, MeasurementType.TEMPERATURE),
+    CELSIUS(2.12, MeasurementType.TEMPERATURE);
+
+    Double baseValue;
+    MeasurementType type;
+
+    MeasurementUnit(double baseValue, MeasurementType type) {
         this.baseValue = baseValue;
+        this.type = type;
     }
 
     public Double convertToBaseValue(Double quantity) {
