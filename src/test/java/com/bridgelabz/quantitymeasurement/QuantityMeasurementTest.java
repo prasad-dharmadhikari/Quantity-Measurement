@@ -231,4 +231,11 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(1001.0, result, 0.0);
     }
 
+    @Test
+    public void givenTemperatureInCelsiusAndFahrenheit_IfEqual_ShouldReturnEqual() {
+        MeasurementQuantity firstValue = new MeasurementQuantity(212.0, MeasurementUnit.FAHRENHEIT);
+        MeasurementQuantity secondValue = new MeasurementQuantity(100.0, MeasurementUnit.CELSIUS);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
+    }
 }
