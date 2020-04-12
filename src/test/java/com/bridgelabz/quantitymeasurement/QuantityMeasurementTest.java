@@ -135,4 +135,12 @@ public class QuantityMeasurementTest {
         String result = quantityMeasurement.compare(firstValue, secondValue);
         Assert.assertEquals("equal", result);
     }
+
+    @Test
+    public void given2InchAnd5Centimeter_ShouldReturnEqual() {
+        Distance firstValue = new Distance(2.0, MeasurementUnit.INCH);
+        Distance secondValue = new Distance(5.0, MeasurementUnit.CENTIMETER);
+        String result = quantityMeasurement.compare(firstValue, secondValue);
+        Assert.assertEquals("equal", result);
+    }
 }
