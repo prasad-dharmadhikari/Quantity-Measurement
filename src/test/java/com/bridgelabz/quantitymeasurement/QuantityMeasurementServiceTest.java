@@ -308,7 +308,7 @@ public class QuantityMeasurementServiceTest {
             MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.LITRES);
             Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
         } catch (QuantityMeasurementException e) {
-            Assert.assertEquals(QuantityMeasurementException.ExceptionType.TYPE_MISMATCH, e.type);
+            Assert.assertEquals(QuantityMeasurementException.ExceptionType.INVALID_TYPES_FOR_ADDITION, e.type);
         }
     }
 
