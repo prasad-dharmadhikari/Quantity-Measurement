@@ -284,7 +284,7 @@ public class QuantityMeasurementServiceTest {
     public void givenTwoObjects_IfMeasurementTypesAreNotEqual_ShouldThrowException() {
         try {
             MeasurementQuantity firstValue = new MeasurementQuantity(212.0, MeasurementUnit.FAHRENHEIT);
-            MeasurementQuantity secondValue = new MeasurementQuantity(100.0, MeasurementUnit.CELSIUS);
+            MeasurementQuantity secondValue = new MeasurementQuantity(100.0, MeasurementUnit.INCH);
             quantityMeasurement.compare(firstValue, secondValue);
         } catch (QuantityMeasurementException e) {
             Assert.assertEquals(QuantityMeasurementException.ExceptionType.TYPE_MISMATCH, e.type);
@@ -305,11 +305,21 @@ public class QuantityMeasurementServiceTest {
     public void givenTwoValues_IfMeasurementTypesAreNotEqualWhileAddition_ShouldThrowException() {
         try {
             MeasurementQuantity firstValue = new MeasurementQuantity(1.0, MeasurementUnit.TONNE);
-            MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.GRAMS);
+            MeasurementQuantity secondValue = new MeasurementQuantity(1000.0, MeasurementUnit.LITRES);
             Double result = quantityMeasurement.addTwoValues(firstValue, secondValue);
-            Assert.assertEquals(1001.0, result, 0.0);
         } catch (QuantityMeasurementException e) {
             Assert.assertEquals(QuantityMeasurementException.ExceptionType.TYPE_MISMATCH, e.type);
+        }
+    }
+
+    @Test
+    public void givenTwoTemperatureValuesForAddition_ShouldThrowException() {
+        try {
+            MeasurementQuantity firstValue = new MeasurementQuantity(212.0, MeasurementUnit.CELSIUS);
+            MeasurementQuantity secondValue = new MeasurementQuantity(100.0, MeasurementUnit.FAHRENHEIT);
+            quantityMeasurement.addTwoValues(firstValue, secondValue);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(QuantityMeasurementException.ExceptionType.INVALID_TYPES_FOR_ADDITION, e.type);
         }
     }
 }
