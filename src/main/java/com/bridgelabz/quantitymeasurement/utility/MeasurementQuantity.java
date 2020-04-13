@@ -6,9 +6,9 @@ public class MeasurementQuantity {
     public Double quantity;
     public MeasurementType type;
 
-    public MeasurementQuantity(Double quantity, MeasurementUnit unit, MeasurementType type) {
-        this.quantity = unit.convertToBaseValue(quantity);
-        this.type = type;
+    public MeasurementQuantity(Double quantity, MeasurementUnit unit) {
+        this.quantity = unit.convertToBaseValue(quantity, unit);
+        this.type = unit.type;
     }
 
     @Override

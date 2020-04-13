@@ -14,8 +14,8 @@ public enum MeasurementUnit {
     GRAMS(0.001, MeasurementType.WEIGHT),
     TONNE(1000, MeasurementType.WEIGHT),
 
-    FAHRENHEIT(1, MeasurementType.TEMPERATURE),
-    CELSIUS(2.12, MeasurementType.TEMPERATURE);
+    FAHRENHEIT(5.0 / 9.0, MeasurementType.TEMPERATURE),
+    CELSIUS(9.0 / 5.0, MeasurementType.TEMPERATURE);
 
     Double baseValue;
     MeasurementType type;
@@ -25,7 +25,14 @@ public enum MeasurementUnit {
         this.type = type;
     }
 
-    public Double convertToBaseValue(Double quantity) {
-        return quantity * this.baseValue;
+    public Double convertToBaseValue(Double quantity, MeasurementUnit unit) {
+        switch (unit) {
+            case FAHRENHEIT:
+                return ((quantity - 32) * (baseValue));
+            case CELSIUS:
+                return ((quantity * (baseValue)) + 32);
+            default:
+                return quantity * baseValue;
+        }
     }
 }
